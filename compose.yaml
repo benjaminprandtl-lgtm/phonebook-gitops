@@ -1,0 +1,16 @@
+services:
+  backend:
+    build:
+      context: ./apps/backend
+    image: phonebook-backend:local
+    ports:
+      - "3001:3001"
+
+  frontend:
+    build:
+      context: ./apps/frontend
+    image: phonebook-frontend:local
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend

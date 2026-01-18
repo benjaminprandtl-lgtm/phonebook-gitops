@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import "./App.css";
+import { useEffect, useState } from "react";import "./App.css";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -12,7 +11,8 @@ function App() {
         setLoading(true);
         setError("");
 
-        const res = await fetch("/api/contacts");
+        
+	const res = await fetch("/api/contacts");
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }
